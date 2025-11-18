@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZOGU Page</title>
+  <title>ZOGU Downloads</title>
   <style>
     body {
       background-color: #0a0a0a;
@@ -37,7 +37,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 20px;
-      max-width: 800px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
@@ -62,17 +62,15 @@
   <h1>ZOGU</h1>
   <input type="text" id="search" placeholder="Search buttons...">
   <div class="button-grid" id="buttons">
-    <button>Home</button>
-    <button>About</button>
-    <button>Services</button>
-    <button>Contact</button>
-    <button>Blog</button>
-    <button>Portfolio</button>
-    <button>FAQ</button>
-    <button>Support</button>
+    <button>Temurin</button>
+    <button>ZMulti</button>
+    <button>AnyViewer</button>
   </div>
 
+  <script src="download.js"></script>
+
   <script>
+    // Search functionality
     const searchInput = document.getElementById('search');
     const buttons = document.querySelectorAll('#buttons button');
 
