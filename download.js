@@ -12,7 +12,9 @@ const downloadMap = {
   //"FAQ": "files/faq.txt",
   //"Support": "files/support.txt"
   // Template :
-   "Temurin" : "https://adoptium.net/download?link=https%3A%2F%2Fgithub.com%2Fadoptium%2Ftemurin25-binaries%2Freleases%2Fdownload%2Fjdk-25.0.1%252B8%2FOpenJDK25U-jdk_x64_windows_hotspot_25.0.1_8.msi&vendor=Adoptium"
+   "Temurin" : "https://adoptium.net/download?link=https%3A%2F%2Fgithub.com%2Fadoptium%2Ftemurin25-binaries%2Freleases%2Fdownload%2Fjdk-25.0.1%252B8%2FOpenJDK25U-jdk_x64_windows_hotspot_25.0.1_8.msi&vendor=Adoptium",
+   "ZMulti" : "downloadable/ZMulti.zip",
+   "AnyViewer" : "https://dl.anyviewer.com/noinstall/AnyViewer.exe"
   
 };
 
