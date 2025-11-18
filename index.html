@@ -6,53 +6,82 @@
   <title>ZOGU Page</title>
   <style>
     body {
-      background-color: #0a0a0a; /* Really dark background */
+      background-color: #0a0a0a;
       color: white;
       font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       margin: 0;
-      text-align: center;
+      padding: 20px;
     }
 
     h1 {
       font-weight: bold;
       font-size: 4em;
-      margin-bottom: 40px;
+      text-align: center;
+      margin: 0 0 40px 0;
     }
 
-    .buttons {
-      display: flex;
-      gap: 20px; /* Equal spacing between buttons */
+    #search {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: none;
+      background-color: #222;
+      color: white;
     }
 
-    button {
-      padding: 15px 30px;
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .button-grid button {
+      padding: 20px;
       font-size: 1.2em;
       font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       background-color: #222;
       color: white;
       transition: background-color 0.2s;
     }
 
-    button:hover {
+    .button-grid button:hover {
       background-color: #555;
     }
   </style>
 </head>
 <body>
   <h1>ZOGU</h1>
-  <div class="buttons">
-    <button>Button 1</button>
-    <button>Button 2</button>
-    <button>Button 3</button>
+  <input type="text" id="search" placeholder="Search buttons...">
+  <div class="button-grid" id="buttons">
+    <button>Home</button>
+    <button>About</button>
+    <button>Services</button>
+    <button>Contact</button>
+    <button>Blog</button>
+    <button>Portfolio</button>
+    <button>FAQ</button>
+    <button>Support</button>
   </div>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const buttons = document.querySelectorAll('#buttons button');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      buttons.forEach(btn => {
+        btn.style.display = btn.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
-
